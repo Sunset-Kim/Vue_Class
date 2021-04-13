@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const div = document.querySelector('#app');
+        let str = "hellow World"
+        console.log(div);
+        div.innerHTML = str;
+
+        str = 'heloow World!!!';
+        div.innerHTML = str;
+
+        // 기존의 방법: str 문자열을 그때그때 div의 정보를 최신화 시켜야 했음.
+        
+    </script>
+</body>
+</html>

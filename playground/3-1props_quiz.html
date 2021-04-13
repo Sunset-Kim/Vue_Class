@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propsquiz</title>
+</head>
+<body>
+    <div id="app">
+        <app-header v-bind:propdata="message"></app-header>
+        <app-content v-bind:propdata="num"></app-content>
+    </div>
+    <!-- vue script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 컴포넌트
+        let appHeader = {
+            template: '<h1>{{ propdata }}</h1>',
+            props: ['propdata'],
+        }
+        let appContent = {
+            template: '<div>{{ propdata }}</div>',
+            props: ['propdata'],
+        }
+
+        // vue 생성
+        new Vue({
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent,
+            },
+            data: {
+                message: 'hi',
+                num: 10,
+            },
+        })
+    </script>
+</body>
+</html>
